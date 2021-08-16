@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app:
+    image: tomcat:7
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    volumes:
+      - /Users/wallberg/git/repox/gui/target/repox.war:/usr/local/tomcat/webapps/repox.war
+  db:
+    image: postgres:9
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 'repox'

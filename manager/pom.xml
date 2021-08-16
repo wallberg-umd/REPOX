@@ -224,7 +224,7 @@
 			<type>pom</type>
 		</dependency>
 		<dependency>
-			<groupId>marc4j</groupId>
+			<groupId>org.marc4j</groupId>
 			<artifactId>marc4j</artifactId>
 		</dependency>
 		<dependency>
