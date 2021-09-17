@@ -23,6 +23,28 @@ Original repox site:
 Repox github site:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Repox github development](https://github.com/europeana/repox2 "Repox github development")
 
+## Building the Docker Image
+
+First, build gui/target/repox.war using JDK8.
+
+``` bash
+> mvn package
+```
+
+To build the Docker image named "repox":
+
+``` bash
+> docker build -t repox .
+```
+
+To run the freshly built Docker container on port 8080:
+
+``` bash
+> docker run -it --rm -p 8080:8080 repox
+```
+
+Visit the webapp at [http://localhost:8080/repox/](http://localhost:8080/repox/) with credentials admin/admin .
+
 ###Contributor###
 - - - 
 <img src="http://www.theeuropeanlibrary.org/confluence/download/attachments/8880494/TEL_logoe_transparent_AEtry-out.jpg" alt="The European Library" width=200px/> <img src="http://www.axes-project.eu/wp-content/uploads/2012/02/europeana.jpg" alt="Europeana" width=200px/>  
